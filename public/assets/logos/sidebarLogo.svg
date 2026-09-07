@@ -1,0 +1,11 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="FreighTrack">
+  <defs>
+    <linearGradient id="ft-mark-compact" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B1F3A" />
+      <stop offset="100%" stop-color="#0057FF" />
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="48" height="48" rx="12" fill="url(#ft-mark-compact)" />
+  <path d="M14 32 L24 14 L28 22 L34 10 L44 32" fill="none" stroke="#00C2FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <circle cx="34" cy="10" r="3" fill="#ffffff" />
+</svg>
