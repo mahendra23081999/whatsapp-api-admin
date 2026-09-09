@@ -104,7 +104,7 @@ const DynamicSettingsProvider = ({ children }: DynamicSettingsProviderProps) => 
     const applyAll = () => {
       if (isSettingsLoaded && settings) {
         const { app_name, app_description } = settings;
-        const fullTitle = `${pageTitle ? `${pageTitle} | ` : ""}${app_name || "FreighTrack WhatsApp API"} | Automate Your Business Communication With Smart WhatsApp Solutions`;
+        const fullTitle = `${pageTitle ? `${pageTitle} | ` : ""}${app_name || "WABOT WhatsApp API"} | Business messaging and automation`;
         if (document.title !== fullTitle) document.title = fullTitle;
         if (app_description) {
           let meta = document.querySelector('meta[name="description"]') as HTMLMetaElement | null;

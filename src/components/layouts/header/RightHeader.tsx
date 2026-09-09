@@ -82,9 +82,9 @@ const RightHeader = () => {
 
       <Button
         onClick={() => dispatch(setRTL())}
-        className="p-2.5 rounded-lg transition-all duration-200
+        className="p-2 rounded-md transition-all duration-200
           dark:bg-page-body dark:text-slate-400 dark:hover:text-white dark:hover:bg-(--dark-sidebar)
-          bg-white text-slate-500 hover:text-(--text-green-primary) hover:bg-blue-50 shadow-sm border border-slate-100 dark:border-none"
+          bg-transparent text-slate-500 hover:text-(--text-green-primary) hover:bg-slate-100 dark:border-none dark:hover:bg-white/10"
       >
         {!isRTL ? <PilcrowRight className="w-5 h-5" /> : <PilcrowLeft className="w-5 h-5" />}
       </Button>
@@ -95,9 +95,9 @@ const RightHeader = () => {
             <Button
               onClick={handleSwitch}
               disabled={isSwitching}
-              className="p-2.5 rounded-lg transition-all duration-200
+                className="p-2 rounded-md transition-all duration-200
                 dark:bg-page-body dark:text-slate-400 dark:hover:text-white dark:hover:bg-(--dark-sidebar)
-                bg-white text-slate-500 hover:text-(--text-green-primary) hover:bg-blue-50 shadow-sm border border-slate-100 dark:border-none"
+                bg-transparent text-slate-500 hover:text-(--text-green-primary) hover:bg-slate-100 dark:border-none dark:hover:bg-white/10"
             >
               {isSwitching ? (
                 <span className="w-5 h-5 border-2 border-primary/30 border-t-primary rounded-full animate-spin" />
@@ -115,9 +115,9 @@ const RightHeader = () => {
       <Button
         ref={themeBtnRef}
         onClick={handleThemeToggle}
-        className="p-2.5 rounded-lg transition-all duration-200
+        className="p-2 rounded-md transition-all duration-200
           dark:bg-page-body dark:text-slate-400 dark:hover:text-white dark:hover:bg-(--dark-sidebar)
-          bg-white text-slate-500 hover:text-(--text-green-primary) hover:bg-blue-50 shadow-sm border border-slate-100 dark:border-none"
+          bg-transparent text-slate-500 hover:text-(--text-green-primary) hover:bg-slate-100 dark:border-none dark:hover:bg-white/10"
       >
         {darkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
       </Button>

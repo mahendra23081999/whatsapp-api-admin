@@ -17,8 +17,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "FreighTrack WhatsApp API",
-  description: "Automate Your Business Communication With Smart WhatsApp Solutions",
+  title: "WABOT WhatsApp API",
+  description: "WABOT WhatsApp API workspace for business messaging and automation",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

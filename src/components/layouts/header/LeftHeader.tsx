@@ -137,7 +137,7 @@ const LeftHeader = () => {
   return (
     <div
       ref={searchContainerRef}
-      className="hidden md:flex flex-1 max-w-md relative ml-2 items-center"
+      className="hidden md:flex flex-1 max-w-lg relative ml-3 items-center"
     >
       <div className="relative w-full">
         <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 z-10" />
@@ -152,11 +152,16 @@ const LeftHeader = () => {
           }}
           onClick={handleOpen}
           className={`
-              pl-10 pr-4 py-2.5 w-full rounded-lg text-sm outline-none transition-all border
+              pl-10 pr-14 py-2 w-full rounded-md text-sm outline-none transition-all border
               dark:bg-page-body dark:border-(--card-border-color) dark:text-slate-200 dark:focus:bg-page-body dark:focus:border-(--text-green-primary)
-              bg-(--input-color) border-(--input-border-color) text-slate-600 focus:border-(--text-green-primary)
+              bg-slate-50/80 border-(--input-border-color) text-slate-600 focus:border-(--text-green-primary) focus:bg-white dark:bg-white/5
             `}
         />
+        {!searchQuery && (
+          <kbd className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 rounded border border-slate-200 bg-white px-1.5 py-0.5 text-[10px] font-medium text-slate-400 dark:border-white/10 dark:bg-white/5">
+            Ctrl K
+          </kbd>
+        )}
         {searchQuery && (
           <Button
             onClick={handleClose}

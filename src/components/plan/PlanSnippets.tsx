@@ -134,7 +134,7 @@ const PlanSnippets = () => {
           </div>
           <h3 className="text-lg font-bold text-slate-800 dark:text-white mb-2">No Pricing Snippets Yet</h3>
           <p className="text-slate-500 dark:text-slate-400 text-sm sm:mb-6 mb-4">
-            Create your first pricing embed snippet to showcase live FreighTrack WhatsApp API plans on your website or landing page.
+            Create your first pricing embed snippet to showcase live WABOT WhatsApp API plans on your website or landing page.
           </p>
           <Button onClick={() => setIsModalOpen(true)} className="text-white px-4.5 py-5">
             Create First Snippet

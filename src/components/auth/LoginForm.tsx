@@ -11,7 +11,7 @@ import { useAppDispatch, useAppSelector } from "@/src/redux/hooks";
 import { setCredentials, setLoading } from "@/src/redux/reducers/authSlice";
 import { LoginRequest } from "@/src/types/auth";
 import { Label } from "@radix-ui/react-label";
-import { AlertCircle, Eye, EyeOff, Lock, Mail } from "lucide-react";
+import { AlertCircle, ArrowUpRight, CheckCircle2, Eye, EyeOff, Lock, Mail, MessageCircle, ShieldCheck, Zap } from "lucide-react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -157,61 +157,74 @@ const LoginForm = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col only992:flex-row bg-auth-bg dark:bg-page-body relative overflow-hidden">
+    <div className="min-h-screen flex flex-col only992:flex-row bg-[#f3f7f6] dark:bg-[#071512] relative overflow-hidden">
       <AuthControls />
 
       {/* Left panel — brand / illustration (hidden below 992px) */}
-      <div className="hidden only992:flex only992:w-[46%] relative flex-col justify-between p-12 overflow-hidden bg-linear-to-br from-(--ft-navy) via-(--ft-navy) to-(--ft-blue) text-white">
-        {/* Decorative global network */}
-        <div className="absolute inset-0 opacity-[0.15]">
-          <svg viewBox="0 0 400 400" className="w-full h-full">
-            <circle cx="200" cy="200" r="150" fill="none" stroke="white" strokeWidth="1" />
-            <circle cx="200" cy="200" r="100" fill="none" stroke="white" strokeWidth="1" />
-            <circle cx="200" cy="200" r="50" fill="none" stroke="white" strokeWidth="1" />
-            <line x1="0" y1="200" x2="400" y2="200" stroke="white" strokeWidth="1" />
-            <line x1="200" y1="0" x2="200" y2="400" stroke="white" strokeWidth="1" />
-          </svg>
-        </div>
-        <div className="absolute top-16 right-10 w-3 h-3 rounded-full bg-(--ft-cyan) shadow-[0_0_16px_4px_rgba(0,194,255,0.6)] animate-pulse" />
-        <div className="absolute bottom-32 left-16 w-2 h-2 rounded-full bg-(--ft-cyan) shadow-[0_0_12px_3px_rgba(0,194,255,0.6)] animate-pulse" />
-        <div className="absolute top-1/2 left-8 w-2.5 h-2.5 rounded-full bg-white/70 shadow-[0_0_10px_3px_rgba(255,255,255,0.4)] animate-pulse" />
+      <div className="hidden only992:flex only992:w-[47%] relative flex-col justify-between p-10 xl:p-14 overflow-hidden bg-[#08251d] text-white">
+        <div className="absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_80%_15%,rgba(37,211,102,0.28),transparent_30%),linear-gradient(135deg,transparent_0%,rgba(255,255,255,0.03)_100%)]" />
+        <div className="absolute -right-28 top-24 h-96 w-96 rounded-full border border-[#25d366]/20" />
+        <div className="absolute -right-16 top-36 h-72 w-72 rounded-full border border-[#25d366]/15" />
+        <div className="absolute bottom-28 left-14 h-2 w-2 rounded-full bg-[#25d366] shadow-[0_0_18px_5px_rgba(37,211,102,0.5)]" />
 
         <div className="relative z-10">
-          <DynamicLogo className="h-10 w-auto object-contain brightness-0 invert" />
-        </div>
-
-        <div className="relative z-10 space-y-6">
-          <h2 className="text-3xl font-bold leading-tight">
-            Automate Your Business<br />Communication With Smart<br />WhatsApp Solutions
-          </h2>
-          <p className="text-white/70 text-sm max-w-sm">
-            One connected platform for logistics teams to manage WhatsApp messaging, customer communication, and cargo updates — worldwide.
-          </p>
-          <div className="flex items-center gap-6 pt-4">
-            <div className="flex items-center gap-2 text-sm text-white/80">
-              <span className="w-2 h-2 rounded-full bg-(--ft-cyan)" /> Global Delivery Network
+          <div className="flex items-center gap-3">
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#25d366] text-[#08251d] shadow-lg shadow-[#25d366]/20">
+              <MessageCircle className="h-6 w-6 fill-current" />
             </div>
-            <div className="flex items-center gap-2 text-sm text-white/80">
-              <span className="w-2 h-2 rounded-full bg-(--ft-cyan)" /> Real-time Messaging
+            <div>
+              <p className="text-lg font-semibold tracking-tight">WABOT</p>
+              <p className="text-[10px] font-medium uppercase tracking-[0.24em] text-[#9bd7b0]">MULTIPLESTACK</p>
             </div>
           </div>
         </div>
 
-        <p className="relative z-10 text-xs text-white/50">© {new Date().getFullYear()} {settings?.app_name || t('common_app_name')}. All rights reserved.</p>
+        <div className="relative z-10 max-w-xl space-y-7">
+          <div className="inline-flex items-center gap-2 rounded-full border border-[#25d366]/30 bg-[#25d366]/10 px-3 py-1.5 text-xs font-medium text-[#b6ebc6]">
+            <span className="h-1.5 w-1.5 rounded-full bg-[#25d366]" /> Messaging operations, connected
+          </div>
+          <h2 className="text-4xl font-semibold leading-[1.08] tracking-[-0.04em] xl:text-5xl">
+            Move every customer conversation forward.
+          </h2>
+          <p className="max-w-md text-sm leading-6 text-[#b8cdc3]">
+            Manage WhatsApp API traffic, sales conversations, notifications, and team workflows from one focused command center.
+          </p>
+          <div className="grid max-w-md grid-cols-2 gap-3 pt-2">
+            <div className="rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur-sm">
+              <Zap className="mb-5 h-5 w-5 text-[#25d366]" />
+              <p className="text-sm font-medium">Fast automation</p>
+              <p className="mt-1 text-xs leading-5 text-[#91aca0]">Trigger customer updates with confidence.</p>
+            </div>
+            <div className="rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur-sm">
+              <ShieldCheck className="mb-5 h-5 w-5 text-[#25d366]" />
+              <p className="text-sm font-medium">Built for teams</p>
+              <p className="mt-1 text-xs leading-5 text-[#91aca0]">Keep access and operations organized.</p>
+            </div>
+          </div>
+        </div>
+
+        <p className="relative z-10 text-xs text-[#759487]">© {new Date().getFullYear()} {settings?.app_name || t('common_app_name')}. All rights reserved.</p>
       </div>
 
-      {/* Right panel — glass login card */}
-      <div className="flex-1 flex flex-col items-center justify-center p-4.5 relative">
-        <div className="w-full max-w-md relative">
-          <Card className="w-full bg-white/80 backdrop-blur-xl border border-white/60 shadow-2xl overflow-hidden rounded-2xl dark:bg-(--card-color)/80 dark:border dark:border-(--card-border-color)">
-            <CardContent className="pt-12 sm:p-8 p-5">
+      {/* Right panel — focused sign-in surface */}
+      <div className="flex-1 flex flex-col items-center justify-center p-5 sm:p-8 relative">
+        <div className="w-full max-w-[430px] relative">
+          <Card className="w-full overflow-hidden rounded-2xl border border-[#dbe8e1] bg-white shadow-[0_24px_70px_-28px_rgba(8,37,29,0.35)] dark:border-white/10 dark:bg-[#0d211a]">
+            <CardContent className="p-6 sm:p-9">
               {/* Logo / Icon */}
-              <div className="flex flex-col items-center mb-8 only992:hidden">
-                <DynamicLogo />
+              <div className="mb-8 flex items-center gap-3 only992:hidden">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#25d366] text-[#08251d]">
+                  <MessageCircle className="h-6 w-6 fill-current" />
+                </div>
+                <div>
+                  <p className="text-lg font-semibold tracking-tight text-[#08251d] dark:text-white">WABOT</p>
+                  <p className="text-[10px] font-medium uppercase tracking-[0.24em] text-[#6d8d7d] dark:text-[#9bd7b0]">MULTIPLESTACK</p>
+                </div>
               </div>
               <div className="flex flex-col mb-8">
-                <h1 className="text-xl sm:text-2xl font-bold text-(--text-green-primary) mb-2">Welcome Back To FreighTrack</h1>
-                <p className="text-sm text-slate-500 dark:text-gray-400">Manage customer communication, automate WhatsApp messaging, and grow your logistics business.</p>
+                <p className="mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-[#25a95a]">Operations console</p>
+                <h1 className="text-2xl font-semibold tracking-tight text-[#102c21] dark:text-white">Welcome back</h1>
+                <p className="mt-2 text-sm leading-6 text-slate-500 dark:text-gray-400">Sign in to manage your WhatsApp API workspace and customer traffic.</p>
               </div>
 
               {error && (
@@ -223,22 +236,22 @@ const LoginForm = () => {
 
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="space-y-2">
-                  <Label htmlFor="email" className="text-sm font-semibold text-slate-700 flex flex-col dark:text-gray-300">
-                    Enter your email
+                  <Label htmlFor="email" className="text-xs font-semibold uppercase tracking-[0.08em] text-slate-600 flex flex-col dark:text-gray-300">
+                    Work email or phone
                   </Label>
                   <div className="relative">
                     <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
-                    <Input id="email" type="text" placeholder="Email or phone number" value={identifier} onChange={(e) => setIdentifier(e.target.value)} className="dark:border-(--card-border-color) dark:bg-page-body pl-10 h-12 pe-3.75 border-slate-200 focus:border-none shadow-none focus:ring-none" required disabled={isLoading} />
+                    <Input id="email" type="text" placeholder="you@company.com" value={identifier} onChange={(e) => setIdentifier(e.target.value)} className="dark:border-white/10 dark:bg-[#071512] pl-10 h-12 pe-3.75 rounded-lg border-[#dbe8e1] bg-[#f8fbf9] shadow-none focus:border-[#25a95a] focus:ring-2 focus:ring-[#25d366]/20" required disabled={isLoading} />
                   </div>
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="password" className="text-sm font-semibold text-slate-700 flex flex-col dark:text-gray-300">
-                    Enter your password
+                  <Label htmlFor="password" className="text-xs font-semibold uppercase tracking-[0.08em] text-slate-600 flex flex-col dark:text-gray-300">
+                    Password
                   </Label>
                   <div className="relative">
                     <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
-                    <Input id="password" type={showPassword ? "text" : "password"} placeholder="••••••••" value={password} onChange={(e) => setPassword(e.target.value)} className="pl-10 pr-10 dark:bg-page-body dark:border-(--card-border-color) h-12 border-slate-200 shadow-none focus:border-none focus:ring-none" required disabled={isLoading} />
+                    <Input id="password" type={showPassword ? "text" : "password"} placeholder="Enter your password" value={password} onChange={(e) => setPassword(e.target.value)} className="pl-10 pr-10 dark:bg-[#071512] dark:border-white/10 h-12 rounded-lg border-[#dbe8e1] bg-[#f8fbf9] shadow-none focus:border-[#25a95a] focus:ring-2 focus:ring-[#25d366]/20" required disabled={isLoading} />
                     <Button type="button" onClick={() => setShowPassword(!showPassword)} className="bg-transparent hover:bg-transparent shadow-none absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 transition-colors" disabled={isLoading} aria-label={showPassword ? "Hide password" : "Show password"}>
                       {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
                     </Button>
@@ -246,9 +259,9 @@ const LoginForm = () => {
                 </div>
 
                 <div className="space-y-2">
-                  <Label className="text-sm font-semibold text-slate-700 flex flex-col dark:text-gray-300">Select your role</Label>
+                  <Label className="text-xs font-semibold uppercase tracking-[0.08em] text-slate-600 flex flex-col dark:text-gray-300">Workspace role</Label>
                   <Select value={role_id} onValueChange={setRoleId}>
-                    <SelectTrigger className="h-12 border-slate-200 dark:bg-page-body dark:border-(--card-border-color) shadow-none focus:border-none focus:ring-none">
+                    <SelectTrigger className="h-12 rounded-lg border-[#dbe8e1] bg-[#f8fbf9] shadow-none focus:border-[#25a95a] focus:ring-2 focus:ring-[#25d366]/20 dark:bg-[#071512] dark:border-white/10">
                       <SelectValue placeholder="Select a role" />
                     </SelectTrigger>
                     <SelectContent className="dark:bg-(--card-color) dark:border-(--card-border-color) z-110">
@@ -263,9 +276,9 @@ const LoginForm = () => {
                   </Select>
                 </div>
 
-                <Button type="submit" className="w-full h-14 text-white font-medium text-base transition-all shadow-md shadow-primary/20" disabled={isLoading}>
-                  {isLoading ? "Logging in..." : "Login to Admin Panel"}
-                  <Lock className="w-4 h-4" />
+                <Button type="submit" className="group w-full h-12 rounded-lg bg-[#128c4a] text-white font-semibold text-sm transition-all shadow-lg shadow-[#128c4a]/20 hover:bg-[#0e753d]" disabled={isLoading}>
+                  {isLoading ? "Signing in..." : "Enter workspace"}
+                  <ArrowUpRight className="w-4 h-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
                 </Button>
               </form>
 
@@ -280,14 +293,14 @@ const LoginForm = () => {
                     </div>
                   </div>
 
-                  <div className="mt-6 p-3 bg-(--light-primary) rounded-lg border border-success-border-light justify-center flex cursor-pointer dark:bg-transparent dark:border-(--card-border-color)" onClick={fillDemoCredentials}>
-                    <p className="text-sm font-semibold text-slate-600 dark:text-gray-400">Demo Credentials</p>
+                  <div className="mt-6 p-3 bg-[#effaf2] rounded-lg border border-[#ccebd5] justify-center flex cursor-pointer dark:bg-[#123021] dark:border-white/10" onClick={fillDemoCredentials}>
+                    <p className="text-sm font-semibold text-[#287c45] dark:text-[#a9e3b8]">Use demo workspace credentials</p>
                   </div>
                 </>
               )}
 
               <div className="mt-6 text-center">
-                <Link href={ROUTES.ForgotPassword} prefetch={false} className="text-sm text-(--text-green-primary) hover:text-blue-700 hover:underline font-medium">
+                <Link href={ROUTES.ForgotPassword} prefetch={false} className="text-sm text-[#168c4c] hover:text-[#0e753d] hover:underline font-medium">
                   Forgot password?
                 </Link>
               </div>

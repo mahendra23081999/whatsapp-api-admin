@@ -22,7 +22,7 @@ const NotFound = () => {
             Page Not Found
           </h2>
           <p className="text-lg text-gray-600 mb-2 dark:text-gray-400">
-            {"Oops! The page you're looking for doesn't exist in FreighTrack WhatsApp API."}
+            {"Oops! The page you're looking for doesn't exist in WABOT WhatsApp API."}
           </p>
           <p className="text-sm text-gray-500 dark:text-gray-400">
             It might have been moved, deleted, or the URL might be incorrect.

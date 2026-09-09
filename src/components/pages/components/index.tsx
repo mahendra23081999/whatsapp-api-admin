@@ -114,7 +114,7 @@ const PagesContainer = () => {
 
   return (
     <div className="space-y-6">
-      <CommonHeader title={t("nav_pages")} description={t("pages_subtitle", "Create and manage the Web Pages, content, and SEO settings for your FreighTrack site.")} onSearch={handleSearch} searchTerm={inputValue} onFilter={() => setIsFilterModalOpen(true)} isLoading={isFetching} columns={columns} onColumnToggle={handleColumnToggle} selectedCount={selectedIds.length} onBulkDelete={() => setIsBulkDeleteModalOpen(true)} onAddClick={() => router.push(ROUTES.ManagePagesAdd)} addLabel={t("pages_add_new", "Add New Page")} addPermission="create.pages" bulkDeletePermission="delete.pages" bulkActionLoading={isDeleting} />
+      <CommonHeader title={t("nav_pages")} description={t("pages_subtitle", "Create and manage the Web Pages, content, and SEO settings for your WABOT site.")} onSearch={handleSearch} searchTerm={inputValue} onFilter={() => setIsFilterModalOpen(true)} isLoading={isFetching} columns={columns} onColumnToggle={handleColumnToggle} selectedCount={selectedIds.length} onBulkDelete={() => setIsBulkDeleteModalOpen(true)} onAddClick={() => router.push(ROUTES.ManagePagesAdd)} addLabel={t("pages_add_new", "Add New Page")} addPermission="create.pages" bulkDeletePermission="delete.pages" bulkActionLoading={isDeleting} />
 
       <PageList
         pages={pages}

@@ -32,7 +32,7 @@ const Dashboard = () => {
   });
 
   useEffect(() => {
-    dispatch(setPageTitle("FreighTrack Communication Dashboard"));
+    dispatch(setPageTitle("WABOT Communication Dashboard"));
 
     return () => {
       dispatch(setPageTitle(""));
@@ -76,15 +76,12 @@ const Dashboard = () => {
   const { counts, charts, tables } = response.data;
 
   return (
-    <div className="min-h-screen bg-page-body-bg relative overflow-hidden selection:bg-primary/20">
-      <div className="absolute top-0 right-0 w-125 h-125 bg-indigo-500/5 rounded-full blur-[120px] -z-10 pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-150 h-150 bg-blue-500/5 rounded-full blur-[150px] -z-10 pointer-events-none" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-200 h-200 bg-purple-500/2 rounded-full blur-[180px] -z-10 pointer-events-none" />
-
-      <div className="space-y-10 relative z-10 animate-in fade-in slide-in-from-bottom-4 duration-1000">
-        <div className="flex justify-between items-center mb-5 flex-wrap gap-4">
+    <div className="min-h-screen bg-page-body-bg selection:bg-primary/20">
+      <div className="space-y-8 animate-in fade-in slide-in-from-bottom-2 duration-500">
+        <div className="flex justify-between items-end flex-wrap gap-4">
           <div className="space-y-1">
-            <h4 className="text-2xl font-semibold text-primary">{t("performance_insights")}</h4>
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-400">Overview</p>
+            <h4 className="text-2xl font-semibold tracking-tight text-slate-950 dark:text-white">{t("performance_insights")}</h4>
           </div>
           <div className="flex flex-col md:flex-row  justify-end gap-4 mb-0">
             <div className="flex flex-wrap items-center gap-4 p-1 self-start md:self-auto">

@@ -46,10 +46,10 @@ export function DashboardDateFilter({ onFilterChange }: DashboardDateFilterProps
   return (
     <div className="flex items-center gap-3 flex-wrap">
       <Select value={dateRange} onValueChange={handlePresetChange}>
-        <SelectTrigger className="w-35 h-11 bg-white dark:bg-(--card-color) border-(--input-border-color) dark:border-(--card-border-color) rounded-lg font-semibold text-sm tracking-tight transition-all">
+        <SelectTrigger className="w-35 h-10 bg-white dark:bg-(--card-color) border-(--input-border-color) dark:border-(--card-border-color) rounded-md font-medium text-sm tracking-tight transition-all">
           <SelectValue placeholder="Range" />
         </SelectTrigger>
-        <SelectContent className="dark:bg-(--card-color) border-(--input-border-color) dark:border-(--card-border-color) rounded-xl shadow-xl">
+        <SelectContent className="dark:bg-(--card-color) border-(--input-border-color) dark:border-(--card-border-color) rounded-md shadow-xl">
           {presets?.map((preset) => (
             <SelectItem key={preset.value} value={preset.value} className="font-bold text-xs uppercase tracking-tighter rounded-lg m-1">
               {preset.label}
@@ -61,7 +61,7 @@ export function DashboardDateFilter({ onFilterChange }: DashboardDateFilterProps
       {dateRange === "custom" && (
         <Popover>
           <PopoverTrigger asChild>
-            <Button variant="outline" className={cn("h-11 justify-start text-left font-black text-xs border-(--input-border-color) dark:border-(--card-border-color) rounded-lg bg-white dark:bg-(--card-color) min-w-55 uppercase tracking-tighter shadow-sm hover:shadow-md transition-all hover:border-primary/50", !customRange && "text-muted-foreground")}>
+            <Button variant="outline" className={cn("h-10 justify-start text-left font-medium text-xs border-(--input-border-color) dark:border-(--card-border-color) rounded-md bg-white dark:bg-(--card-color) min-w-55 tracking-tight shadow-none hover:border-primary/50", !customRange && "text-muted-foreground")}>
               <CalendarIcon className="mr-2 h-4 w-4 text-primary" />
               {customRange?.from ? (
                 customRange.to ? (

@@ -186,7 +186,7 @@ const PageForm = ({
               ? t("pages_subtitle")
               : t(
                   "pages_add_subtitle",
-                  "Fill in the details below to create a new web page for your FreighTrack site.",
+                  "Fill in the details below to create a new web page for your WABOT site.",
                 )}
           </p>
         </div>

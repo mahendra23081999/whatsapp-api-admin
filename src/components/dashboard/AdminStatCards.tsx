@@ -105,18 +105,12 @@ const AdminStatCards = ({ counts, showPlans = true, showSubscriptions = true, su
     const styles = getColorClasses(stat.color);
 
     return (
-      <Card key={index} className="group relative overflow-hidden border-none! bg-white dark:bg-(--card-color) shadow-sm hover:shadow-xl transition-all duration-500 rounded-lg cursor-default border border-white/10">
-        {/* Background Gradient Layer (Top Right corner style as per image) */}
-        <div className={`absolute top-0 right-0 w-32 h-32 bg-linear-to-bl ${styles.gradient} opacity-60 group-hover:opacity-100 transition-opacity duration-700 blur-2xl -mr-10 -mt-10`} />
-
-        {/* Subtle base gradient layer */}
-        <div className={`absolute inset-0 bg-linear-to-br ${styles.gradient} opacity-[0.03] group-hover:opacity-10 transition-opacity duration-500`} />
-
-        <CardContent className="sm:p-6 p-4 pb-3! relative z-10 transition-colors duration-500">
+      <Card key={index} className="group relative overflow-hidden border border-slate-200/80 bg-white dark:bg-(--card-color) dark:border-(--card-border-color) shadow-none hover:border-slate-300 dark:hover:border-white/25 transition-colors duration-200 rounded-lg cursor-default">
+        <CardContent className="sm:p-5 p-4 pb-4! relative z-10 transition-colors duration-500">
           <div className="flex flex-col gap-2">
             {/* Header: Icon and Trend */}
             <div className="flex items-start justify-between gap-2 flex-wrap">
-              <div className={`shrink-0 w-11 h-11 rounded-lg ${styles.bg} ${styles.text} flex items-center justify-center transition-all duration-500 group-hover:scale-110 shadow-sm border ${styles.border}`}>
+              <div className={`shrink-0 w-10 h-10 rounded-md ${styles.bg} ${styles.text} flex items-center justify-center transition-colors duration-200 border ${styles.border}`}>
                 <stat.icon className="w-5 h-5" />
               </div>
               <div className={`flex items-center gap-1 text-[11px] font-bold rounded-full px-2 py-0.5 max-w-full ${stat.trendColor} border border-white/10`}>
@@ -129,7 +123,7 @@ const AdminStatCards = ({ counts, showPlans = true, showSubscriptions = true, su
             <div className="space-y-1">
               <div className="flex items-baseline gap-1">
                 {stat.prefix && <span className="text-lg font-bold text-slate-400 dark:text-slate-500 transition-colors duration-500">{stat.prefix}</span>}
-                <span className="text-3xl font-black tracking-tight text-slate-900 dark:text-white transition-colors duration-500 font-mono!">
+                <span className="text-2xl font-semibold tracking-tight text-slate-900 dark:text-white transition-colors duration-500 font-mono!">
                   <CountUp end={stat.value} duration={2} separator="," />
                 </span>
               </div>

@@ -144,47 +144,47 @@
 }
 
 :root {
-  /* FreighTrack brand */
-  --ft-navy: #0b1f3a;
-  --ft-blue: #0057ff;
-  --ft-cyan: #00c2ff;
+  /* WABOT brand */
+  --ft-navy: #0b2a23;
+  --ft-blue: #128c4a;
+  --ft-cyan: #25d366;
   --ft-success: #16a34a;
   --ft-warning: #f59e0b;
 
   --primary: var(--ft-navy) !important;
   --secondary: var(--ft-blue) !important;
   --text-green-primary: var(--ft-navy) !important;
-  --light-primary: #eaf2ff !important;
-  --light-secondary: #e6f6fe !important;
+  --light-primary: #e8f7ee !important;
+  --light-secondary: #e6f5ec !important;
   --text-light-secondary: var(--ft-blue) !important;
-  --text-stealth-Green: #0b1f3a !important;
-  --light-background: #f1f5f9 !important;
-  --page-body-bg: #f8fafc !important;
+  --text-stealth-Green: #0b2a23 !important;
+  --light-background: #eef2f7 !important;
+  --page-body-bg: #f6f8fb !important;
   --warning-color: var(--ft-warning) !important;
-  --input-color: #f8fafc !important;
-  --input-border-color: #e2e8f0 !important;
+  --input-color: #ffffff !important;
+  --input-border-color: #dbe3ee !important;
   /* Semantic UI variables */
   --light-body-bg: #eef2f7;
   --sidebar-hover-green: var(--ft-blue);
   --muted-text-color: #94a3b8;
-  --body-text-color: #475569;
-  --body-text-hover-color: #1e293b;
-  --auth-bg-color: #f4f7fb;
+  --body-text-color: #334155;
+  --body-text-hover-color: #0f172a;
+  --auth-bg-color: #f3f8f5;
   --error-bg-light: #ff000014;
   --error-border-light: #ff000042;
   --success-bg-dark: #16a34a30;
   --success-border-light: #16a34a33;
   --light-loader-bg: #fafafa;
   --overlay-bg: #00000082;
-  --card-border-light: #f1f5f9;
-  --switch-dark-bg: #0057ff40;
+  --card-border-light: #e6ebf1;
+  --switch-dark-bg: #128c4a40;
   /* Chart colors */
-  --chart-teal: #00c2ff;
+  --chart-teal: #25d366;
   --chart-warning: #f59e0b;
   --chart-danger: #ef4444;
   --chart-purple: #8b5cf6;
   --chart-pink: #ec4899;
-  --chart-indigo: #6366f1;
+  --chart-indigo: #128c4a;
   /* Brand / payment gateway colors */
   --stripe-purple: #635BFF;
   --razorpay-dark: #072654;
@@ -196,76 +196,76 @@
   /* WhatsApp preview (kept authentic to real WhatsApp UI, not rebranded) */
   --whatsapp-chat-bg: #E5DDD5;
   --whatsapp-header-bg: #075E54;
-  --radius: 0.625rem;
+  --radius: 0.5rem;
   --background: #ffffff;
-  --foreground: #0b1220;
+  --foreground: #102c21;
   --card: #ffffff;
-  --card-foreground: #0b1220;
+  --card-foreground: #102c21;
   --popover: #ffffff;
   --popover-foreground: #0b1220;
   --primary: var(--ft-navy);
   --primary-foreground: #ffffff;
-  --secondary: #eef2f7;
+  --secondary: #edf6f0;
   --secondary-foreground: var(--ft-navy);
-  --muted: #f1f5f9;
+  --muted: #f0f7f2;
   --muted-foreground: #64748b;
-  --accent: #e6f6fe;
+  --accent: #e6f5ec;
   --accent-foreground: var(--ft-navy);
   --destructive: #e63946;
-  --border: #e6ebf1;
-  --input: #e6ebf1;
+  --border: #dcebe1;
+  --input: #dcebe1;
   --ring: var(--ft-blue);
   --chart-1: var(--ft-blue);
   --chart-2: var(--ft-cyan);
   --chart-3: var(--ft-navy);
   --chart-4: #8b5cf6;
   --chart-5: var(--ft-warning);
-  --sidebar: #fafbfc;
+  --sidebar: #ffffff;
   --sidebar-foreground: var(--ft-navy);
   --sidebar-primary: var(--ft-navy);
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #e6f6fe;
+  --sidebar-accent: #e6f5ec;
   --sidebar-accent-foreground: var(--ft-navy);
-  --sidebar-border: #e6ebf1;
+  --sidebar-border: #dcebe1;
   --sidebar-ring: var(--ft-blue);
 }
 
 .dark {
-  --background: #071421;
+  --background: #071512;
   --foreground: #f1f5f9;
-  --card: #0d1f33;
+  --card: #0d211a;
   --card-foreground: #f1f5f9;
   /* --page-body-bg: #101828!important; */
-  --dark-sidebar: #0057ff1f !important;
-  --table-hover: #0057ff1a !important;
-  --dark-body: #050d17 !important;
-  --page-body-bg: #0b1626 !important;
-  --card-color: #0d1f33 !important;
-  --card-border-color: #ffffff20 !important;
-  --popover: #0d1f33;
+  --dark-sidebar: #25d3661f !important;
+  --table-hover: #25d3661a !important;
+  --dark-body: #05100c !important;
+  --page-body-bg: #071512 !important;
+  --card-color: #0d211a !important;
+  --card-border-color: #ffffff16 !important;
+  --popover: #0d211a;
   --popover-foreground: #f1f5f9;
-  --primary: #4d8fff;
-  --primary-foreground: #071421;
-  --secondary: #16283f;
+  --primary: #25d366;
+  --primary-foreground: #062016;
+  --secondary: #123021;
   --secondary-foreground: #f1f5f9;
-  --muted: #16283f;
+  --muted: #123021;
   --muted-foreground: #94a3b8;
-  --accent: #16283f;
+  --accent: #123021;
   --accent-foreground: #f1f5f9;
   --destructive: #ef4444;
   --border: rgba(255, 255, 255, 0.1);
   --input: rgba(255, 255, 255, 0.15);
-  --ring: #00c2ff;
-  --chart-1: #4d8fff;
-  --chart-2: #00c2ff;
+  --ring: #25d366;
+  --chart-1: #25d366;
+  --chart-2: #8be8a9;
   --chart-3: #8b5cf6;
   --chart-4: #f59e0b;
   --chart-5: #ef4444;
-  --sidebar: #0d1f33;
-  --sidebar-primary: #4d8fff;
-  --sidebar-accent: #16283f;
+  --sidebar: #0d211a;
+  --sidebar-primary: #25d366;
+  --sidebar-accent: #123021;
   --sidebar-border: rgba(255, 255, 255, 0.1);
-  --sidebar-ring: #00c2ff;
+  --sidebar-ring: #25d366;
 }
 
 @layer base {
@@ -276,6 +276,13 @@
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-mona-sans);
+    min-width: 320px;
+    text-rendering: optimizeLegibility;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
   }
 
   /* scrollbar */

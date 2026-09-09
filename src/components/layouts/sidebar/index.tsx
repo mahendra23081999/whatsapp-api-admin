@@ -42,8 +42,8 @@ const NavItem: React.FC<NavItemProps> = ({
   const isLeafNode = !hasSubmenu;
 
   const activeClasses = isLeafNode
-    ? "bg-gradient-to-r from-(--text-green-primary) to-sidebar-hover-green text-white h-[44px] shadow-lg shadow-(--text-green-primary)/25"
-    : "bg-blue-50  h-[44px] hover:bg-blue-50! shadow-unset dark:hover:bg-sidebar-hover-green/50! dark:bg-sidebar-hover-green/50 text-(--text-green-primary)";
+    ? "bg-(--text-green-primary) text-white h-[42px] shadow-sm shadow-(--text-green-primary)/20"
+    : "bg-(--light-primary) h-[42px] hover:bg-(--light-primary)! shadow-unset dark:hover:bg-sidebar-hover-green/50! dark:bg-sidebar-hover-green/50 text-(--text-green-primary)";
 
   const inactiveClasses =
     "hover:bg-slate-100 bg-[unset]! dark:hover:bg-sidebar-hover-green/30 text-slate-500 dark:text-slate-400 shadow-[unset] hover:text-slate-900 dark:hover:text-slate-200";
@@ -54,7 +54,7 @@ const NavItem: React.FC<NavItemProps> = ({
         onClick={onClick}
         className={`
           w-full flex items-center justify-between transition-all duration-200 relative overflow-hidden rounded-lg
-          ${collapsed ? "p-2.5 justify-center mb-1" : "p-3 mb-1"}
+          ${collapsed ? "p-2.5 justify-center mb-1" : "px-3 py-2.5 mb-1"}
           ${(isLeafNode ? active : isSubmenuOpen) ? activeClasses : inactiveClasses}
         `}
       >
@@ -352,17 +352,17 @@ export default function Sidebar() {
           ${isVisible ? "translate-x-0" : isRTL ? "translate-x-full" : "-translate-x-full"}`}
         dir={isRTL ? "rtl" : "ltr"}
       >
-        <div className="h-full p-4">
+        <div className="h-full border-e border-slate-200/80 dark:border-white/10">
           <div
             className={`
-            h-full rounded-lg flex flex-col overflow-hidden border backdrop-blur-xl shadow-2xl transition-all duration-300
-            ${"bg-white/80 dark:bg-(--card-color) border-white/60 dark:border-(--card-border-color) shadow-blue-100/50 dark:shadow-black/50"}
+            h-full flex flex-col overflow-hidden transition-all duration-300
+            ${"bg-white dark:bg-(--card-color)"}
             ${isVisuallyCollapsed ? "px-2" : "px-0"}
           `}
           >
             {/* Logo Section */}
             <div
-              className={`${isVisuallyCollapsed ? "p-4" : "p-6 pb-2"} ${isVisuallyCollapsed ? "flex justify-center w-full" : ""}`}
+              className={`${isVisuallyCollapsed ? "p-4" : "p-5 pb-3"} ${isVisuallyCollapsed ? "flex justify-center w-full" : ""}`}
             >
               <div className="flex items-center justify-between">
                 <div
