@@ -88,6 +88,7 @@ const SettingInner = () => {
       // If no fields changed and no files are pending, just reset and return
       if (Object.keys(changedFields).length === 0 && !hasPendingFiles) {
         dispatch(resetDirty());
+        toast.info("No changes to save");
         return;
       }
 

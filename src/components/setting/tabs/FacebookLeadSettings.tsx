@@ -17,6 +17,7 @@ const FacebookLeadSettings = () => {
   const dispatch = useAppDispatch();
   const settings = useAppSelector((state) => state.settings.data);
   const [showVerifyToken, setShowVerifyToken] = useState(false);
+  const [showIgVerifyToken, setShowIgVerifyToken] = useState(false);
 
   const onChange = (key: keyof AppSettings, value: AppSettings[keyof AppSettings]) => {
     dispatch(updateSettingField({ key, value }));
@@ -110,7 +111,7 @@ const FacebookLeadSettings = () => {
             </Label>
             <div className="relative group">
               <Input
-                type={showVerifyToken ? "text" : "password"}
+                type={showIgVerifyToken ? "text" : "password"}
                 value={settings.instagram_webhook_verify_token || ""}
                 onChange={(e) => onChange("instagram_webhook_verify_token", e.target.value)}
                 placeholder={t("settings_instagram_webhook_verify_token_placeholder")}
@@ -120,10 +121,10 @@ const FacebookLeadSettings = () => {
                 type="button"
                 variant="ghost"
                 size="icon"
-                onClick={() => setShowVerifyToken(!showVerifyToken)}
+                onClick={() => setShowIgVerifyToken(!showIgVerifyToken)}
                 className="absolute right-2 top-1/2 -translate-y-1/2 h-8 w-8 text-slate-400 hover:text-slate-600 dark:hover:text-slate-300 hover:bg-slate-100 dark:hover:bg-gray-800 rounded-lg transition-all"
               >
-                {showVerifyToken ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                {showIgVerifyToken ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
               </Button>
             </div>
             <p className="text-[11px] text-slate-400 dark:text-slate-500">
