@@ -22,7 +22,7 @@ const FacebookLeadSettings = () => {
   const onChange = (key: keyof AppSettings, value: AppSettings[keyof AppSettings]) => {
     dispatch(updateSettingField({ key, value }));
   };
-
+  const ImageBaseUrlFacebook = 'https://whatsapp-api-1-909486928139.asia-south1.run.app';
   return (
     <div className="space-y-5">
       <SettingCard
@@ -39,7 +39,7 @@ const FacebookLeadSettings = () => {
             <div className="relative group">
               <Input
                 type="text"
-                value={settings.facebook_lead_webhook_url ? `${ImageBaseUrl ?? ""}/${settings.facebook_lead_webhook_url}` : ""}
+                value={settings.facebook_lead_webhook_url ? `${ImageBaseUrlFacebook ?? ""}/${settings.facebook_lead_webhook_url}` : ""}
                 placeholder="https://yourdomain.com/api/webhook/facebook-lead"
                 className="h-12 bg-slate-50 dark:bg-page-body/50 border-slate-200 dark:border-(--card-border-color) px-4 font-mono text-[13px] text-slate-500 dark:text-slate-400 opacity-80"
                 disabled
